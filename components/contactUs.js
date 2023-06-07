@@ -57,7 +57,7 @@ export default function ContactUs() {
                     id="first-name"
                     placeholder='Adam Gelius'
                     autoComplete="given-name"
-                    className="block w-full  border-b-[0.4px] py-2 text-gray-900 shadow-b-sm  placeholder:text-gray-400 placeholder:text-base focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full  border-b-[0.4px] py-2 text-gray-900 shadow-b-sm  placeholder:text-gray-400 placeholder:text-base sm:text-sm sm:leading-6"
                   />
                 </div>
             </div>
@@ -72,7 +72,7 @@ export default function ContactUs() {
                     id="email"
                     placeholder='example@yourmail.com'
                     autoComplete="email"
-                    className="block w-full  border-b-[0.4px] py-2 text-gray-900 shadow-b-sm  placeholder:text-gray-400 placeholder:text-base focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full  border-b-[0.4px] py-2 text-gray-900 shadow-b-sm  placeholder:text-gray-400 placeholder:text-base  sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function ContactUs() {
                     id="phone-number"
                     autoComplete="tel"
                     placeholder='+885 1254 5211 552'
-                    className="block w-full  border-b-[0.4px] py-2 text-gray-900 shadow-b-sm  placeholder:text-gray-400 placeholder:text-base focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full  border-b-[0.4px] py-2 text-gray-900 shadow-b-sm  placeholder:text-gray-400 placeholder:text-base  sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function ContactUs() {
                     id="message"
                 
                     placeholder='type your message here'
-                    className="block w-full  border-b-[0.4px] py-2 text-gray-900 shadow-b-sm  placeholder:text-gray-400 placeholder:text-base focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full  border-b-[0.4px] py-2 text-gray-900 shadow-b-sm  placeholder:text-gray-400 placeholder:text-base  sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -110,7 +110,7 @@ export default function ContactUs() {
             <div className="mt-8 flex justify-start">
               <button
                 type="submit"
-                className="rounded-md bg-indigo-600 px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-indigo-600 px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 "
               >
                 Send 
               </button>
