@@ -22,7 +22,7 @@ const reviews = [
       "I tried the online visa photo maker and it was incredibly easy to use. The software ensured that my photo met all the necessary requirements. Highly recommended!
       `,
         designation: 'Founder @ Rolex',
-        author: 'Skjbbjo Masties',
+        author: 'Sabbbo Masties',
         avatarSrc:
             'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
     },
@@ -33,7 +33,7 @@ const reviews = [
       "I tried the online visa photo maker and it was incredibly easy to use. The software ensured that my photo met all the necessary requirements. Highly recommended!
       `,
         designation: 'Founder @ Rolex',
-        author: 'kjbjbo Masties',
+        author: 'sabaaa Masties',
         avatarSrc:
             'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
     },

@@ -48,7 +48,7 @@ export default function ContactUs() {
             <div className='space-y-8'>
               <div className='sm:col-span-2'>
                 <label htmlFor="first-name" className="block text-sm font-normal leading-6 text-gray-700">
-                  Full name
+                  Full name*
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -78,7 +78,7 @@ export default function ContactUs() {
               </div>
               <div className="sm:col-span-2">
                 <label htmlFor="phone-number" className="block text-sm font-normal leading-6 text-gray-700">
-                  Phone number
+                  Phone number*
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -93,7 +93,7 @@ export default function ContactUs() {
               </div>
               <div className="sm:col-span-2">
                 <label htmlFor="message" className="block text-sm font-normal leading-6 text-gray-700">
-                  Message
+                  Message*
                 </label>
                 <div className="mt-2.5">
                 <input
