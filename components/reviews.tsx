@@ -14,7 +14,7 @@ interface Review {
 
 
 const reviews: Review[] = [
-  
+
   {
       id: 1,
       rating: 5,
@@ -107,7 +107,7 @@ export default function Reviews() {
         <div>
           <h2 className="text-2xl sm:text-4xl font-semibold">What our Customers Say?</h2>
 
-          <div className={`grid grid-cols-${reviewsPerPage} gap-6 mt-12`}>
+          <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 mt-12`}>
             {visibleReviews.map((review) => (
               <div key={review.id} className="text-sm max-w-md rounded-lg shadow-lg p-4 text-gray-500">
                 {/* Review content */}
