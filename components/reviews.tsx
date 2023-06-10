@@ -24,7 +24,7 @@ const reviews: Review[] = [
       designation: 'Founder @ Rolex',
       author: 'Sabo Masties',
       avatarSrc:
-          'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+      '/assets/image.svg'
   },
   {
       id: 2,
@@ -35,7 +35,7 @@ const reviews: Review[] = [
       designation: 'Founder @ Rolex',
       author: 'Sabbbo Masties',
       avatarSrc:
-          'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+      '/assets/image.svg'
   },
   {
       id: 3,
@@ -46,7 +46,7 @@ const reviews: Review[] = [
       designation: 'Founder @ Rolex',
       author: 'sabaaa Masties',
       avatarSrc:
-          'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+      '/assets/image.svg'
   },
   {
       id: 4,
@@ -57,7 +57,7 @@ const reviews: Review[] = [
       designation: 'Founder @ Rolex',
       author: 'Saba Masties',
       avatarSrc:
-          'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+          '/assets/image.svg',
   },
 
 ]
@@ -126,11 +126,13 @@ export default function Reviews() {
                 <div className="mt-4 max-w-none text-gray-500">{review.content}</div>
                 <div className="flex space-x-4">
                   <div className="flex-none py-10">
-                    <img
-                      src={review.avatarSrc}
+                    <Image 
+                     src={review.avatarSrc}
                       alt=""
                       className="h-10 w-10 rounded-full bg-gray-100"
-                    />
+                  height={43}
+                  width={43}
+                  />
                   </div>
                   <div className="py-10">
                     <h3 className="font-medium text-gray-900">{review.author}</h3>

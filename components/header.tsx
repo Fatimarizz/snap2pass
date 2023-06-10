@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
-import { Bars3Icon , XMarkIcon } from '@heroicons/react/24/outline';
-
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import Image from 'next/image';
 interface NavigationItem {
   name: string;
   href: string;
@@ -20,9 +21,12 @@ export default function Header() {
     <header className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <img className="h-8 w-auto" src="./assets/PhotoApi.png" alt="" />
-          </a>
+          <Link href="/" >
+            <div className="-m-1.5 p-1.5">
+            <Image className="h-8 w-auto cursor-pointer" src="/assets/PhotoApi.svg" alt="" height={50} width={50} />
+             
+            </div>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -34,11 +38,13 @@ export default function Header() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-12 cursor-pointer">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm  leading-6 text-gray-900">
-              {item.name}
-            </a>
+            <Link href={item.href}  key={item.name}>
+              <div className="text-sm  leading-6 text-gray-900">
+                {item.name}
+              </div>
+            </Link>
           ))}
         </div>
       </nav>
@@ -46,9 +52,13 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5">
-              <img className="h-8 w-auto" src="./assets/PhotoApi.png" alt="" />
-            </a>
+
+            <Link href="/" >
+              <div className="">
+                <Image className="h-8 w-auto" src="/assets/PhotoApi.svg" alt="" height={34} width={34} />
+              </div>
+            </Link>
+
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -62,13 +72,12 @@ export default function Header() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    {item.name}
-                  </a>
+                  <Link href={item.href}  key={item.name}>
+                    <div  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      {item.name}
+                    </div>
+                  </Link>
+
                 ))}
               </div>
             </div>

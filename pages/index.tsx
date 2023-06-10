@@ -131,13 +131,13 @@ const UploadSelfie = () => {
         <p className='sm:text-base mt-2'>Upload a selfie or a portrait and get a compliant visa or passport photo in a few seconds!</p>
       </div>
       <div className='sm:w-1/2 mt-8 lg:mt-0 '>
-        <a className='bg-darkblue flex items-center sm:w-[80%] rounded-md text-sm sm:text-base justify-center font-medium sm:text-semibold text-white px-4 py-2 space-x-5'>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5 mr-3">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+        <div className='bg-darkblue flex items-center sm:w-[80%] rounded-md text-sm sm:text-base justify-center font-medium sm:text-semibold text-white px-4 py-2 space-x-5'>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 mr-3">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
           </svg>
 
           Pick a file to get started
-        </a>
+        </div>
       </div>
     </div>
   )
@@ -301,14 +301,16 @@ const ValidationApiProcess = () => {
             key={action.title}
           >
             <div>
-              <img src={action.icon} className="h-8 w-8" aria-hidden="true" />
+            <Image className="h-8 w-8" src={action.icon} alt="" height={34} width={34} />
+            
             </div>
             <div className="mt-3 max-w-[13rem]">
               <h3 className="text-base font-semibold leading-6 text-gray-900">
-                <a href={action.id} className="focus:outline-none">
+                
+                <div key={action.id} className="focus:outline-none">
                   <span className="absolute inset-0" aria-hidden="true" />
                   {action.title}
-                </a>
+                </div>
               </h3>
               <p className="mt-2 text-sm text-gray-500">
                 {action.desc}
@@ -353,9 +355,9 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <dd>
-                    <a className=" font-bold hover:text-gray-900" href="mailto:hello@example.com">
+                    <div className=" font-bold hover:text-gray-900" >
                       How can we help?
-                    </a>
+                    </div>
                   </dd>
                   <p>info@snap2pass.com</p>
                 </div>
