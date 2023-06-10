@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import 'global.css';
-import Header from '@/components/header';
+import Header from '../components/header';
 
 interface MyAppProps {
   Component: React.ComponentType<any>;

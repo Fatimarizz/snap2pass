@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 import 'tailwindcss/tailwind.css';
 import { MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
-import Reviews from '@/components/reviews';
+import Reviews from '../components/reviews';
 
 const MainSection = () => {
   return (
@@ -94,7 +94,7 @@ const ApiProcess = () => {
 
   return (
     <div className="mx-auto  max-w-7xl px-6 py-12 flex flex-col md:flex md:flex-col md:items-center lg:items-start sm:block lg:px-8">
-      <h2 className="text-3xl font-bold">Photo Maker API Process</h2>
+      <h2 className="text-2xl font-bold">Photo Maker API Process</h2>
       <p className="text-md font-medium text-gray-500">4 easy steps to get a compliant photo</p>
       <div className="mt-12 lg:flex lg:gap-x-24">
         <div className="lg:flex lg:mt-0">
@@ -308,7 +308,7 @@ const ValidationApiProcess = () => {
               <h3 className="text-base font-semibold leading-6 text-gray-900">
                 
                 <div key={action.id} className="focus:outline-none">
-                  <span className="absolute inset-0" aria-hidden="true" />
+               
                   {action.title}
                 </div>
               </h3>
@@ -446,8 +446,6 @@ const ContactUs = () => {
     </div>
   )
 }
-
-
 
 const Home = () => {
 
