@@ -3,7 +3,6 @@ import Image from 'next/image';
 import 'tailwindcss/tailwind.css';
 import { MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import Reviews from '@/components/reviews';
-import Header from '@/components/header';
 
 const MainSection = () => {
   return (
@@ -32,7 +31,7 @@ const MainSection = () => {
           <div className="mt-9 space-y-3">
             <div className="flex justify-center sm:justify-start p-2 bg-white rounded-md">
               <div className="mr-3 mt-1">
-                <Image src="/assets/camera.png" className="h-6 w-6 sm:w-8" height={30} width={30} alt="" />
+                <Image src="/assets/camera.png" className="h-6 w-6 sm:w-9" height={30} width={30} alt="" />
               </div>
               <div>
                 <h3 className="text-darkblue">Photo Maker</h3>
@@ -43,7 +42,7 @@ const MainSection = () => {
             </div>
             <div className="flex justify-center sm:justify-start p-2 bg-white rounded-md">
               <div className="mr-3 mt-1">
-                <Image src="/assets/check.png" className="h-6 w-6 sm:w-8" height={30} width={30} alt="" />
+                <Image src="/assets/check.png" className="h-6 w-6 sm:w-9" height={40} width={40} alt="" />
               </div>
               <div>
                 <h3 className="text-darkblue">Validation</h3>
@@ -54,7 +53,7 @@ const MainSection = () => {
             </div>
           </div>
         </div>
-        <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+        <div className="mt-16 sm:mt-24 sm:flex sm:justify-center lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
           <Image src="/assets/illustration.png" height={600} width={600} className="hidden sm:block" alt="" />
         </div>
       </div>
@@ -68,7 +67,7 @@ const About = () => {
       <div className="w-full sm:w-1/2">
         <h1 className="text-3xl sm:text-5xl font-bold">About</h1>
       </div>
-      <div className="md:w-1/2 my-4 md:my-0 text-gray-600">
+      <div className="lg:w-1/2 my-4 lg:my-0 text-gray-600">
         <p>
           Welcome to Snap2Pass, your comprehensive solution for real-time,
           <span className="text-darkblue font-semibold"> compliant visa</span> and{" "}
@@ -94,28 +93,28 @@ const ApiProcess = () => {
   ];
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 flex flex-col items-center sm:block lg:px-8">
-      <h2 className="text-2xl font-semibold">Photo Maker API Process</h2>
-      <p className="text-sm font-medium text-gray-500">4 easy steps to get a compliant photo</p>
+    <div className="mx-auto  max-w-7xl px-6 py-12 flex flex-col md:flex md:flex-col md:items-center lg:items-start sm:block lg:px-8">
+      <h2 className="text-3xl font-bold">Photo Maker API Process</h2>
+      <p className="text-md font-medium text-gray-500">4 easy steps to get a compliant photo</p>
       <div className="mt-12 lg:flex lg:gap-x-24">
         <div className="lg:flex lg:mt-0">
-          <div className=" flex space-y-0 space-x-2 justify-center">
+          <div className=" flex space-y-0 space-x-6 md:justify-center">
             <div>
-              <Image src="/assets/left.png" height={300} width={300} alt="" className="h-[250px] w-auto sm:h-[450px] sm:w-[290px]" />
+              <Image src="/assets/left.png" height={300} width={300} alt="" className="h-[300px] w-auto sm:h-[450px] sm:w-[270px]" />
             </div>
             <div>
-              <Image src="/assets/right.png" height={300} width={300} alt="" className="h-[220px] w-auto sm:h-[396px] sm:w-[290px]" />
-              <p className="w-28 sm:w-56 mt-2 text-[6px] sm:text-xs text-gray-600">
+              <Image src="/assets/right.png" height={300} width={300} alt="" className="h-[260px] w-auto sm:h-[396px] sm:w-[270px]" />
+              <p className="w-36 sm:w-56 mt-2 text-[9px] sm:text-xs text-gray-600">
                 The final passport/visa-compliant photo is generated and ready for download or further validation
               </p>
             </div>
           </div>
         </div>
-        <div className="mx-auto max-w-md mt-12 lg:m-0 lg:flex-auto">
+        <div className="max-w-md mt-12 sm:mx-0 lg:m-0 lg:flex-auto">
           {steps.map((item) => (
-            <div className="flex space-x-3 my-8 max-w-sm" key={item.icon}>
+            <div className="flex space-x-3 my-8 lg:max-w-sm" key={item.icon}>
               <Image src={item.icon} alt="" className="h-6 w-6 mt-2" height={40} width={40} />
-              <p className="text-xs sm:text-sm w-60">{item.desc}</p>
+              <p className="text-sm sm:text-md w-64">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -157,7 +156,7 @@ const WhatExactlyHappens = () => {
         <Image src='/assets/4.png' height={300} width={300} alt='' className='mt-12 h-[350px] w-[300px]' />
       </div>
       <div className='hidden md:block sm:absolute left-[25rem]'>
-        <Image src='/assets/centerarrow.svg' height={100} width={100} alt='' className=' h-78 w-78' />
+        <Image src='/assets/centerarrow.svg' height={100} width={100} alt='' className=' ' />
       </div>
       <div className='md:hidden'>
         <Image src='/assets/mobilearrow.svg' height={20} width={20} alt='' className='h-12 w-12' />
@@ -242,44 +241,49 @@ const WhatExactlyHappens = () => {
 const ValidationApiProcess = () => {
   const actions = [
     {
+      id:"1",
       title: 'Pose',
       icon: '/assets/face-scan.png',
       desc: 'Head straight, no tilt, look directly to the camera'
     },
     {
+      id:"2",
       title: 'Sharpness',
       icon: '/assets/focus.png',
       desc: 'No blurriness in the photo.'
     },
     {
+      id:"3",
       title: 'Brightness',
       icon: '/assets/SunDim.png',
       desc: 'The photo should not be dark.'
 
     },
     {
+      id:"4",
       title: 'Forign Objects',
       icon: '/assets/hat.png',
       desc: 'No sunglasses, eyeglasses, hats, caps, or other undesired objects.'
 
     },
     {
+      id:"5",
       title: 'Expression',
       icon: '/assets/smile.png',
       desc: 'Mouth closed, no smiling.'
 
     },
     {
-
+      id:"6",
       title: 'Ear expression',
       icon: '/assets/hearing.png',
       desc: 'Ears should be visible under your hair.'
 
     },
     {
-
+      id:"7",
       title: 'Background Color',
-      icon: '/assets/trasnparnet.png',
+      icon: '/assets/backgroundcolor.png',
       desc: 'Light Background'
 
     },
@@ -301,7 +305,7 @@ const ValidationApiProcess = () => {
             </div>
             <div className="mt-3 max-w-[13rem]">
               <h3 className="text-base font-semibold leading-6 text-gray-900">
-                <a href={action.icon} className="focus:outline-none">
+                <a href={action.id} className="focus:outline-none">
                   <span className="absolute inset-0" aria-hidden="true" />
                   {action.title}
                 </a>
@@ -320,7 +324,7 @@ const ValidationApiProcess = () => {
 
 const ContactUs = () => {
   return (
-    <div className="relative isolate bg-white my-8">
+    <div className="relative isolate bg-white mt-8 mb-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -359,7 +363,8 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <form action="#" method="POST" className=" rounded-md shadow-md max-w-lg px-6 py-4 mx-4 md:mx-0  lg:px-6 lg:py-12">
+        <div className='sm:flex justify-center'>
+        <form action="#" method="POST" className=" rounded-md shadow-md sm:w-[70%] px-6 py-4 mx-4 md:mx-0  lg:px-6 lg:py-12">
           <div className="mx-auto max-w-xl lg:max-w-md  ">
             <h4 className='text-2xl font-semibold mb-4'>Send us Message </h4>
             <div className='space-y-8'>
@@ -434,6 +439,7 @@ const ContactUs = () => {
             </div>
           </div>
         </form>
+        </div>
       </div>
     </div>
   )

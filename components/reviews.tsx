@@ -166,8 +166,8 @@ export default function Reviews() {
           <h1 className="text-xl sm:text-4xl font-bold mt-2">Start your Free trial now!</h1>
         </div>
         <div className="sm:flex sm:space-x-4 text-white mt-8 sm:mt-0">
-          <button className="bg-blue-600 w-full px-6 h-12 rounded-sm text-sm">Contact us</button>
-          <button className="bg-btngreen w-full px-6 h-12 mt-3 sm:mt-0 rounded-sm text-sm">
+          <button className="bg-blue-600 w-full sm:w-[14rem] px-6 h-12 rounded-sm text-sm">Contact us</button>
+          <button className="bg-btngreen w-full sm:w-[14rem] px-6 h-12 mt-3 sm:mt-0 rounded-sm text-sm">
             Start Free Trial
           </button>
         </div>
